@@ -1,0 +1,32 @@
+@import "variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .container {
+    width: 100%;
+    @include flex-align();
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+
+    ul {
+      @include flex-align();
+      justify-content: center;
+      gap: 2rem;
+
+      a {
+        color: $--clr-beige;
+      }
+      .logo {
+        font-size: 4rem;
+        font-weight: 900;
+        color: $--clr-beige;
+      }
+    }
+  }
+}

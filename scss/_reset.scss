@@ -1,0 +1,61 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+    position: relative;
+  }
+  
+  body {
+    &::-webkit-scrollbar {
+      display: none;
+  }
+  }
+
+  body:not(i) {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a,
+  a:visited,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  button {
+    outline: none;
+  }
+  

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScrollX</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./scss/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Best Burger</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li>
+              <a href="index.html">
+                <div class="logo">
+                  <span>The</span>
+                  <i class="fa-solid fa-burger"></i>
+                  <span>Bear</span>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container__page">
+        <div class="page1_container">
+          <h1>Welcome to <br />The Bear</h1>
+          <hr />
+          <h2>Home of the Finest Burgers!</h2>
+          <p>
+            Experience the perfect blend of flavors, crafted to perfection at
+            The Bear.
+            <br />Join us for a burger adventure that will tantalize your taste
+            buds.
+          </p>
+          <button class="page1_button_menu">Our Menu</button>
+          <button class="page1_button_best">Best Burger</button>
+          <div class="scroll_explore">
+            <a href="#">
+              <div class="scroll_explore_arrows">
+                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="scroll_explore_text">
+                <p>Scroll to Explore</p>
+              </div>
+              <div class="scroll_explore_arrows">
+                <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <footer>
+          <div class="footer_container">
+            <div class="footer_container_copyright">
+              <p class="footer_copyright">&copy 2023 The Bear. All Rights Reserved</p>
+            </div>
+            <div class="footer_container_socials">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-x-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div class="footer_container_terms">
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Imprint</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="container__page">
+        <div class="page2_container">
+          <img src="./assets/burger1.png" alt="best burger" />
+          <div class="page2_container_rightside">
+            <h3>Spicy Grizzly <span class="red">Burger</span></h3>
+            <hr />
+            <ul>
+              <li>Spicy beef patty</li>
+              -
+              <li>pepper jack cheese</li>
+              -
+              <li>jalapeños</li>
+              -
+              <li>lettuce</li>
+              -
+              <li>tomato</li>
+              -
+              <li>chipotle mayo</li>
+            </ul>
+            <p>
+              Discover the Best Burger in Town!<br />
+              Made from the juiciest, premium beef patty, topped with fresh,
+              crispy veggies. <br />Every bite is an explosion of flavors that
+              will leave you craving for more. <br />Taste the burger that sets
+              the standard for excellence.
+            </p>
+            <button class="button_order">Order now</button>
+          </div>
+        </div>
+        <img src="./assets/Pepper.png" alt="red pepper" class="pepper_img" id="first_pepper">
+        <img src="./assets/Pepper.png" alt="red pepper" class="pepper_img">
+        <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img">
+        <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img">
+        <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img">
+      </div>
+      <div class="container__page">
+        <div class="page3_menu_container">
+          <div class="page3_heading">
+            <h2>Our Menu</h2>
+          </div>
+          <hr>
+          <div class="page3_items">
+            <div class="page3_item">
+              <div class="page3_item_left">
+                <h3>Classic Bear Burger</h3>
+                <p>Premium beef patty, cheddar cheese, lettuce, tomato, onion, special sauce</p>
+              </div>
+              <div class="page3_item_right">
+                <span class="item_price">$8.99</span>
+                <button class="add_item">Add to Cart</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="page3_image_container">
+          <img src="./assets/menu/burger1.png" alt="Classic Bear Burger">
+        </div>
+      </div>
+      <div class="container__page">
+        <div class="photo">
+          <h1>Link 1</h1>
+        </div>
+        <div class="photo">
+          <h1>Link 2</h1>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
