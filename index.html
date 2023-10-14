@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ScrollX</title>
+    <title>The Bear</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -15,11 +15,11 @@
       <div class="container">
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Best Burger</a></li>
-            <li><a href="#">Our Menu</a></li>
-            <li>
-              <a href="index.html">
+            <li class="animation_menu_left"><a href="#" class="menu_btn">Home</a></li>
+            <li class="animation_menu_left"><a href="#" class="menu_btn">Best Burger</a></li>
+            <li class="animation_menu_left"><a href="#" class="menu_btn">Our Menu</a></li>
+            <li class="animation_logo">
+              <a href="#" class="logo_btn">
                 <div class="logo">
                   <span>The</span>
                   <i class="fa-solid fa-burger"></i>
@@ -27,18 +27,18 @@
                 </div>
               </a>
             </li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="animation_menu_right"><a href="#" class="menu_btn">News</a></li>
+            <li class="animation_menu_right"><a href="#" class="menu_btn">About Us</a></li>
+            <li class="animation_menu_right"><a href="#" class="menu_btn">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="container__page">
+      <div class="container__page" id="page1">
         <div class="page1_container">
           <h1>Welcome to <br />The Bear</h1>
-          <hr />
+          <hr class="page1_hero_hr"/>
           <h2>Home of the Finest Burgers!</h2>
           <p>
             Experience the perfect blend of flavors, crafted to perfection at
@@ -87,7 +87,7 @@
           </div>
         </footer>
       </div>
-      <div class="container__page">
+      <div class="container__page" id="page2">
         <div class="page2_container">
           <img src="./assets/burger1.png" alt="best burger" />
           <div class="page2_container_rightside">
@@ -127,7 +127,7 @@
         <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img" />
         <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img" />
       </div>
-      <div class="container__page">
+      <div class="container__page" id="page3">
         <div class="page3_menu_container">
           <div class="page3_heading">
             <h2>Our Menu</h2>
@@ -151,10 +151,10 @@
           </div>
         </div>
         <div class="page3_image_container">
-          <img src="./assets/menu/burger1.png" alt="Classic Bear Burger" />
+          <img src="./assets/menu/burger1.png" alt="Classic Bear Burger" class="page3_item_image"/>
         </div>
       </div>
-      <div class="container__page">
+      <div class="container__page" id="page4">
         <div class="page4_container">
           <div class="news_container">
             <div class="news_item_container">
@@ -216,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div class="container__page">
+      <div class="container__page" id="page5">
         <div class="page5_container">
           <div class="about_container">
             <div class="about_content">
@@ -238,26 +238,51 @@
           </div>
         </div>
       </div>
-      <div class="container__page">
+      <div class="container__page" id="page6">
         <div class="page6_container">
           <div class="contact_address">
             <div class="address_row1">
               <div class="address_column1">
                 <h4>Address</h4>
-                <p>7190 Sussex Street <br />Worcester, <br />MA 01604<br/><br/>
-                  Phone: +16809925198<br /><br />Email: contact@thebear.com</p>
+                <p>
+                  7190 Sussex Street <br />Worcester, <br />MA 01604<br /><br />
+                  Phone: +16809925198<br /><br />Email: contact@thebear.com
+                </p>
               </div>
               <div class="address_column2">
                 <h4>Opening hours</h4>
-                <p>
-                  Monday Closed<br/>
-                  Tuesday 10 am–9 pm<br/>
-                  Wednesday 10 am–9 pm<br/>
-                  Thursday 10 am–9 pm<br/>
-                  Friday 10am - 9pm<br/>
-                  Saturday 11 am–9 pm<br/>
-                  Sunday 11 am–9 pm
-                </p>
+                <table>
+                  <colgroup span="1">
+                    <tr>
+                      <td>Monday</td>
+                      <td>10 am–9 pm</td>
+                    </tr>
+                    <tr>
+                      <td>Tuesday</td>
+                      <td>10 am–9 pm</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>10 am–9 pm</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>10 am–9 pm</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>10am-9pm</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>11 am–9 pm</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Closed</td>
+                    </tr>
+                  </colgroup>
+                </table>
               </div>
             </div>
             <div class="address_row2">
@@ -272,6 +297,8 @@
         </div>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
     <script type="module" src="./js/app.js"></script>
   </body>

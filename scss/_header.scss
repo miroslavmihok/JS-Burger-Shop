@@ -22,6 +22,25 @@ header {
       a {
         color: $--clr-beige;
       }
+
+      .menu_btn {
+        position: relative;
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: '.';
+          color: transparent;
+          height: 1px;
+          width: 0%;
+          background-color: $--clr-beige;
+          transition: all 0.25s ease;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+
       .logo {
         font-size: 4rem;
         font-weight: 900;
