@@ -11,13 +11,20 @@
     <link rel="stylesheet" href="./scss/styles.css" />
   </head>
   <body>
+    <!-- start of HEADER navbar -->
     <header>
       <div class="container">
         <nav>
           <ul>
-            <li class="animation_menu_left"><a href="#" class="menu_btn">Home</a></li>
-            <li class="animation_menu_left"><a href="#" class="menu_btn">Best Burger</a></li>
-            <li class="animation_menu_left"><a href="#" class="menu_btn">Our Menu</a></li>
+            <li class="animation_menu_left">
+              <a href="#" class="menu_btn">Home</a>
+            </li>
+            <li class="animation_menu_left">
+              <a href="#" class="menu_btn">Best Burger</a>
+            </li>
+            <li class="animation_menu_left">
+              <a href="#" class="menu_btn">Our Menu</a>
+            </li>
             <li class="animation_logo">
               <a href="#" class="logo_btn">
                 <div class="logo">
@@ -27,18 +34,26 @@
                 </div>
               </a>
             </li>
-            <li class="animation_menu_right"><a href="#" class="menu_btn">News</a></li>
-            <li class="animation_menu_right"><a href="#" class="menu_btn">About Us</a></li>
-            <li class="animation_menu_right"><a href="#" class="menu_btn">Contact</a></li>
+            <li class="animation_menu_right">
+              <a href="#" class="menu_btn">News</a>
+            </li>
+            <li class="animation_menu_right">
+              <a href="#" class="menu_btn">About Us</a>
+            </li>
+            <li class="animation_menu_right">
+              <a href="#" class="menu_btn">Contact</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
+    <!-- end of HEADER navbar -->
     <main>
+      <!-- start of PAGE 1 -->
       <div class="container__page" id="page1">
         <div class="page1_container">
           <h1>Welcome to <br />The Bear</h1>
-          <hr class="page1_hero_hr"/>
+          <hr class="page1_hero_hr" />
           <h2>Home of the Finest Burgers!</h2>
           <p>
             Experience the perfect blend of flavors, crafted to perfection at
@@ -87,23 +102,31 @@
           </div>
         </footer>
       </div>
+      <!-- end of PAGE 1 -->
+      <!-- start of PAGE 2 -->
       <div class="container__page" id="page2">
         <div class="page2_container">
-          <img src="./assets/burger1.png" alt="best burger" />
+          <img
+            src="./assets/menu/compressed_webp/burger2.webp"
+            alt="best burger"
+            id="best_burger_image"
+          />
           <div class="page2_container_rightside">
-            <h3>Spicy Grizzly <span class="red">Burger</span></h3>
+            <h3 id="page2_heading">
+              Spicy Grizzly <span class="red">Burger</span>
+            </h3>
             <hr />
             <ul>
               <li>Spicy beef patty</li>
-              -
+              <li>-</li>
               <li>pepper jack cheese</li>
-              -
+              <li>-</li>
               <li>jalapeños</li>
-              -
+              <li>-</li>
               <li>lettuce</li>
-              -
+              <li>-</li>
               <li>tomato</li>
-              -
+              <li>-</li>
               <li>chipotle mayo</li>
             </ul>
             <p>
@@ -116,17 +139,14 @@
             <button class="button_order">Order now</button>
           </div>
         </div>
-        <img
-          src="./assets/Pepper.png"
-          alt="red pepper"
-          class="pepper_img"
-          id="first_pepper"
-        />
+        <img src="./assets/Pepper.png" alt="red pepper" class="pepper_img" />
         <img src="./assets/Pepper.png" alt="red pepper" class="pepper_img" />
         <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img" />
         <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img" />
         <img src="./assets/Pepper2.png" alt="red pepper" class="pepper_img" />
       </div>
+      <!-- end of PAGE 2 -->
+      <!-- start of PAGE 3 -->
       <div class="container__page" id="page3">
         <div class="page3_menu_container">
           <div class="page3_heading">
@@ -151,9 +171,15 @@
           </div>
         </div>
         <div class="page3_image_container">
-          <img src="./assets/menu/burger1.png" alt="Classic Bear Burger" class="page3_item_image"/>
+          <img
+            src="./assets/menu/compressed_webp/burger6.webp"
+            alt="Classic Bear Burger"
+            class="page3_item_image"
+          />
         </div>
       </div>
+      <!-- end of PAGE 3 -->
+      <!-- start of PAGE 4 -->
       <div class="container__page" id="page4">
         <div class="page4_container">
           <div class="news_container">
@@ -216,6 +242,8 @@
           </div>
         </div>
       </div>
+      <!-- end of PAGE 4 -->
+      <!-- start of PAGE 5 -->
       <div class="container__page" id="page5">
         <div class="page5_container">
           <div class="about_container">
@@ -238,6 +266,8 @@
           </div>
         </div>
       </div>
+      <!-- end of PAGE 5 -->
+      <!-- start of PAGE 6 -->
       <div class="container__page" id="page6">
         <div class="page6_container">
           <div class="contact_address">
@@ -296,10 +326,15 @@
           </div>
         </div>
       </div>
+      <!-- end of PAGE 6 -->
     </main>
+    <!-- JS Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+    <!-- my JS files -->
+    <script type="module" src="./js/animations.js"></script>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

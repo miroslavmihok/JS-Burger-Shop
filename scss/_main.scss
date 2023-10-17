@@ -21,7 +21,7 @@ main {
     padding: 10rem;
     &:nth-child(1) {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-        url("../assets/bg4.jpg") no-repeat top/cover;
+        url("../assets/bg4.webp") no-repeat top/cover;
 
       .page1_container {
         width: 100%;
@@ -67,7 +67,7 @@ main {
     &:nth-child(2) {
       position: relative;
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-        url("../assets/bg3.jpg") no-repeat top/cover;
+        url("../assets/bg3.webp") no-repeat top/cover;
       @include flex-row-center();
 
       .page2_container {
@@ -120,7 +120,7 @@ main {
         position: absolute;
         height: auto;
         &:nth-child(2) {
-          //   border: 2px solid green;
+          // border: 2px solid green;
           width: 6rem;
           top: 25%;
           left: 38%;
@@ -128,7 +128,7 @@ main {
           filter: blur(2px);
         }
         &:nth-child(3) {
-          //   border: 2px solid yellow;
+          // border: 2px solid yellow;
           width: 10rem;
           bottom: 10%;
           left: 15%;
@@ -142,7 +142,7 @@ main {
           transform: rotate(-25deg);
         }
         &:nth-child(5) {
-          //   border: 2px solid purple;
+          // border: 2px solid purple;
           width: 7rem;
           top: 20%;
           right: 15%;
@@ -150,7 +150,7 @@ main {
           filter: blur(2px);
         }
         &:nth-child(6) {
-          //   border: 2px solid red;
+          // border: 2px solid red;
           width: 8rem;
           bottom: 25%;
           right: 38%;
@@ -161,10 +161,11 @@ main {
     }
     &:nth-child(3) {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-        url("../assets/bg6.jpg") no-repeat center/cover;
+        url("../assets/bg6.webp") no-repeat center/cover;
       padding: 6rem 15rem;
       display: flex;
       justify-content: flex-start;
+      gap: 1rem;
 
       .page3_menu_container {
         width: 65%;
@@ -211,7 +212,9 @@ main {
               background-color: $--clr-beige;
             }
             &:hover {
-              .page3_item_left h3, .page3_item_left p, .page3_item_right .item_price {
+              .page3_item_left h3,
+              .page3_item_left p,
+              .page3_item_right .item_price {
                 color: $--clr-smokyblack;
               }
             }
@@ -276,7 +279,7 @@ main {
     }
     &:nth-child(4) {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-        url("../assets/bg7.jpg") no-repeat center/cover;
+        url("../assets/bg7.webp") no-repeat center/cover;
       padding: 6rem 15rem;
 
       .page4_container {
@@ -313,21 +316,21 @@ main {
                   rgba(0, 0, 0, 0.1),
                   rgba(0, 0, 0, 0.5)
                 ),
-                url("../assets/news/news_upcoming.jpg") no-repeat center/cover;
+                url("../assets/news/news_upcoming.webp") no-repeat center/cover;
             }
             &:nth-child(2) {
               background: linear-gradient(
                   rgba(0, 0, 0, 0.1),
                   rgba(0, 0, 0, 0.5)
                 ),
-                url("../assets/news/news_discount.jpg") no-repeat center/cover;
+                url("../assets/news/news_discount.webp") no-repeat center/cover;
             }
             &:nth-child(3) {
               background: linear-gradient(
                   rgba(0, 0, 0, 0.1),
                   rgba(0, 0, 0, 0.5)
                 ),
-                url("../assets/news/news_event.jpg") no-repeat center/cover;
+                url("../assets/news/news_event.webp") no-repeat center/cover;
             }
             &:hover .banner {
               transform: translateY(-79%);
@@ -413,7 +416,7 @@ main {
     }
     &:nth-child(5) {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-        url("../assets/bg8.jpg") no-repeat center/cover;
+        url("../assets/bg8.webp") no-repeat center/cover;
       padding: 6rem 15rem;
 
       .page5_container {
@@ -445,7 +448,7 @@ main {
             .about_content_image {
               width: 50%;
               height: 100%;
-              background: url("../assets/about/about4.jpg") no-repeat
+              background: url("../assets/about/about4.webp") no-repeat
                 center/cover;
               border: 0.5rem solid $--clr-lemon;
             }
@@ -470,7 +473,7 @@ main {
     }
     &:nth-child(6) {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
-        url("../assets/bg9.jpg") no-repeat center/cover;
+        url("../assets/bg9.webp") no-repeat center/cover;
       padding: 6rem 15rem;
 
       .page6_container {
@@ -505,7 +508,7 @@ main {
                 margin-top: 1rem;
               }
             }
-            
+
             .address_column2 {
               h4 {
                 font-size: 2.6rem;
@@ -530,7 +533,7 @@ main {
               width: 100%;
               height: auto;
               border: 0;
-              margin-top: 1rem ;
+              margin-top: 1rem;
             }
           }
         }

@@ -79,7 +79,7 @@ main .container__page {
   padding: 10rem;
 }
 main .container__page:nth-child(1) {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg4.jpg") no-repeat top/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg4.webp") no-repeat top/cover;
 }
 main .container__page:nth-child(1) .page1_container {
   width: 100%;
@@ -137,7 +137,7 @@ main .container__page:nth-child(1) .page1_container p {
 }
 main .container__page:nth-child(2) {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg3.jpg") no-repeat top/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg3.webp") no-repeat top/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,10 +230,11 @@ main .container__page:nth-child(2) .pepper_img:nth-child(6) {
   filter: blur(2px);
 }
 main .container__page:nth-child(3) {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg6.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/bg6.webp") no-repeat center/cover;
   padding: 6rem 15rem;
   display: flex;
   justify-content: flex-start;
+  gap: 1rem;
 }
 main .container__page:nth-child(3) .page3_menu_container {
   width: 65%;
@@ -277,7 +278,9 @@ main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_ite
 main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover {
   background-color: #F9F7DC;
 }
-main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_left h3, main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_left p, main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_right .item_price {
+main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_left h3,
+main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_left p,
+main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item:hover .page3_item_right .item_price {
   color: #0E0906;
 }
 main .container__page:nth-child(3) .page3_menu_container .page3_items .page3_item .page3_item_left {
@@ -329,7 +332,7 @@ main .container__page:nth-child(3) .page3_image_container img {
      object-fit: contain;
 }
 main .container__page:nth-child(4) {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/bg7.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/bg7.webp") no-repeat center/cover;
   padding: 6rem 15rem;
 }
 main .container__page:nth-child(4) .page4_container {
@@ -363,13 +366,13 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
   overflow: hidden;
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container:nth-child(1) {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_upcoming.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_upcoming.webp") no-repeat center/cover;
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container:nth-child(2) {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_discount.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_discount.webp") no-repeat center/cover;
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container:nth-child(3) {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_event.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/news/news_event.webp") no-repeat center/cover;
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container:hover .banner {
   transform: translateY(-79%);
@@ -443,7 +446,7 @@ main .container__page:nth-child(4) .page4_container .newsletter_container .subsc
   color: #0E0906;
 }
 main .container__page:nth-child(5) {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/bg8.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../assets/bg8.webp") no-repeat center/cover;
   padding: 6rem 15rem;
 }
 main .container__page:nth-child(5) .page5_container {
@@ -475,7 +478,7 @@ main .container__page:nth-child(5) .page5_container .about_container .about_cont
 main .container__page:nth-child(5) .page5_container .about_container .about_content .about_content_image {
   width: 50%;
   height: 100%;
-  background: url("../assets/about/about4.jpg") no-repeat center/cover;
+  background: url("../assets/about/about4.webp") no-repeat center/cover;
   border: 0.5rem solid #f4f0bb;
 }
 main .container__page:nth-child(5) .page5_container .about_container .about_content .about_content_text {
@@ -492,7 +495,7 @@ main .container__page:nth-child(5) .page5_container .about_container .about_cont
   color: #F9F7DC;
 }
 main .container__page:nth-child(6) {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("../assets/bg9.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("../assets/bg9.webp") no-repeat center/cover;
   padding: 6rem 15rem;
 }
 main .container__page:nth-child(6) .page6_container {
