@@ -3,8 +3,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 // SCROLLING effect with (Lenis)
 
+let orientation;
+
+calcWindowWidth();
+window.addEventListener("resize", calcWindowWidth);
+
+function calcWindowWidth() {
+  if (window.matchMedia("(max-width: 1535px)").matches) {
+    orientation = "vertical";
+  } else {
+    orientation = "horizontal";
+  }
+  requestAnimationFrame(raf);
+}
+
 const lenis = new Lenis({
-  orientation: "horizontal",
+  orientation: orientation,
   duration: 2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 });
@@ -116,7 +130,7 @@ const page2Heading = document.getElementById("page2_heading");
 const horLine = document.querySelector(".page2_container hr");
 const listElements = gsap.utils.toArray(".page2_container_rightside ul li");
 const paragraph = document.querySelector(".page2_container_rightside p");
-const orderBestBurgerBtn = document.querySelector(".button_order");
+const orderBestBurgerBtn = document.querySelector(".button_addToCart");
 const peppersElements = gsap.utils.toArray(".pepper_img");
 
 const page2Timeline = gsap.timeline({
@@ -159,20 +173,28 @@ page2Timeline
     },
     "<"
   )
-  .from(orderBestBurgerBtn, {
-    y: 100,
-    opacity: 0,
-  }, "<")
+  .from(
+    orderBestBurgerBtn,
+    {
+      y: 100,
+      opacity: 0,
+    },
+    "<"
+  )
   .from(peppersElements[1], {
     x: 500,
     opacity: 0,
     ease: "expo.in",
   })
-  .from(peppersElements[2], {
-    x: -500,
-    opacity: 0,
-    ease: "expo.in",
-  }, "<")
+  .from(
+    peppersElements[2],
+    {
+      x: -500,
+      opacity: 0,
+      ease: "expo.in",
+    },
+    "<"
+  )
   .from(peppersElements[4], {
     x: -500,
     opacity: 0,

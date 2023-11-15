@@ -3,21 +3,22 @@
 
 // COLORS
 
-$--clr-indian: #E0525B;
+$--clr-indian: #e0525b;
 $--clr-poppy: #da2c38;
-$--clr-bole: #7E4E46;
+$--clr-bole: #7e4e46;
 $--clr-springgreen: #226f54;
 $--clr-shamrockgreen: #559972;
 $--clr-pistachio: #87c38f;
-$--clr-beige: #F9F7DC;
+$--clr-beige: #f9f7dc;
 $--clr-lemon: #f4f0bb;
-$--clr-lion: #9C8D6D;
+$--clr-lion: #9c8d6d;
 $--clr-bistre: #43291f;
 $--clr-smokyblack-transparent: #0e09064a;
-$--clr-smokyblack: #0E0906;
+$--clr-smokyblack: #0e0906;
 
 // SHADOW
-$--shadow-card: 0 8px 8px 6px rgba(0, 0, 0, 0.6), 0 26px 20px 6px rgba(0, 0, 0, 0.29);
+$--shadow-card: 0 8px 8px 6px rgba(0, 0, 0, 0.6),
+  0 26px 20px 6px rgba(0, 0, 0, 0.29);
 
 // MIXINS
 // displays
@@ -52,7 +53,7 @@ $--shadow-card: 0 8px 8px 6px rgba(0, 0, 0, 0.6), 0 26px 20px 6px rgba(0, 0, 0, 
   }
 }
 
-@mixin button-order() {
+@mixin button-add() {
   color: $--clr-beige;
   font-size: 1.3rem;
   font-weight: 600;
@@ -61,7 +62,44 @@ $--shadow-card: 0 8px 8px 6px rgba(0, 0, 0, 0.6), 0 26px 20px 6px rgba(0, 0, 0, 
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   &:hover {
     background-color: $--clr-indian;
+  }
+}
+
+// media variables
+
+$phone-width: 640px;
+$small_tablet-width: 768px;
+$large_tablet-width: 1024px;
+$small_desktop-width: 1280px;
+$large_desktop-width: 1536px;
+
+@mixin phone {
+  @media (max-width: #{$small_tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (min-width: #{$small_tablet-width}) and (max-width: #{$large_tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$large_tablet-width}) and (max-width: #{$large_desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin not-desktop {
+  @media (max-width: #{$large_desktop-width}) {
+    @content;
   }
 }

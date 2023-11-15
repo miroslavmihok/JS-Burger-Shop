@@ -14,6 +14,7 @@
     <!-- start of HEADER navbar -->
     <header>
       <div class="container">
+        <div class="container-left"></div>
         <nav>
           <ul>
             <li class="animation_menu_left">
@@ -45,6 +46,39 @@
             </li>
           </ul>
         </nav>
+        <div class="container-right">
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <span id="cart_items-counter">0</span>
+          <div class="cart-dropdown">
+            <div class="cart_container">
+              <div class="heading">
+                <h4>Your Cart</h4>
+              </div>
+              <hr />
+              <div class="cart_container_items">
+                <div class="cart-item">
+                  <div class="left">
+                    <span class="cart-item_name">Spicy Grizzly Burger</span>
+                    <span class="cart-item_price">€ 9.99</span>
+                  </div>
+                  <div class="right">
+                    <button class="cart-item_increase cart-square_btn">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <span class="cart-item_count">0</span>
+                    <button class="cart-item_add cart-square_btn">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="cart-item_remove">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="order-btn">Order</button>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- end of HEADER navbar -->
@@ -136,7 +170,7 @@
               will leave you craving for more. <br />Taste the burger that sets
               the standard for excellence.
             </p>
-            <button class="button_order">Order now</button>
+            <button class="button_addToCart">Add to Cart</button>
           </div>
         </div>
         <img src="./assets/Pepper.png" alt="red pepper" class="pepper_img" />
