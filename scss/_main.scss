@@ -496,7 +496,7 @@ main {
         url("../assets/bg7.webp") no-repeat center/cover;
       padding: 6rem 15rem;
       @include phone {
-        padding: 4rem 2rem;
+        padding: 4rem 2rem 2rem 2rem;
       }
       @include small-tablet {
         padding: 2rem;
@@ -540,6 +540,7 @@ main {
             position: relative;
             flex: 1;
             height: 100%;
+            min-height: 100px;
             display: flex;
             flex-flow: column;
             align-items: center;
@@ -576,10 +577,10 @@ main {
             &:hover .banner {
               transform: translateY(-79%);
               @include phone {
-                transform: translateY(-67%);
+                transform: translateY(-72%);
               }
               @include small-tablet {
-                transform: translateY(-69%);
+                transform: translateY(-74%);
               }
             }
 
@@ -596,22 +597,27 @@ main {
               transition: transform 0.3s ease;
               z-index: 1;
               @include phone {
-                bottom: -68%;
+                bottom: -110%;
+                height: auto;
               }
               @include small-tablet {
-                bottom: -70%;
+                bottom: -99%;
+                height: 130%;
               }
 
               .banner_heading {
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 20%;
                 @include phone {
                   height: 30%;
+                  padding: 0.5rem 0;
                 }
                 @include small-tablet {
                   height: 30%;
+                  padding: 0.5rem 0;
                 }
 
                 h3 {
@@ -621,20 +627,26 @@ main {
               }
 
               .banner_content {
+                width: 100%;
                 height: 80%;
                 text-align: center;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 font-size: 1.2rem;
                 color: $--clr-beige;
                 padding: 1rem;
                 @include phone {
-                  font-size: 0.8rem;
-                  height: 70%;
+                  font-size: 0.6rem;
+                  height: auto;
+                  min-height: 100%;
+                  text-align: justify;
                 }
                 @include small-tablet {
-                  font-size: 1rem;
-                  height: 70%;
+                  font-size: 0.9rem;
+                  height: auto;
+                  min-height: 110px;
+                  padding: 2rem 1rem;
                 }
               }
             }
@@ -737,6 +749,9 @@ main {
           border-radius: 1rem;
           padding: 2rem;
           box-shadow: $--shadow-card;
+          @include phone {
+            height: 100%;
+          }
 
           .about_content {
             height: 100%;
@@ -768,7 +783,7 @@ main {
                 font-size: 2.5rem;
                 color: $--clr-beige;
                 @include phone {
-                  font-size: 2rem;
+                  font-size: 1.8rem;
                 }
               }
 
@@ -776,7 +791,7 @@ main {
                 font-size: 1.2rem;
                 color: $--clr-beige;
                 @include phone {
-                  font-size: 1rem;
+                  font-size: 0.8rem;
                 }
               }
             }
@@ -848,7 +863,7 @@ main {
                 color: $--clr-lemon;
                 margin-top: 1rem;
                 @include phone {
-                  font-size: 1.2rem;
+                  font-size: 1rem;
                 }
                 @include small-tablet {
                   font-size: 1.4rem;
@@ -880,7 +895,7 @@ main {
                 color: $--clr-lemon;
                 margin-top: 1rem;
                 @include phone {
-                  font-size: 1.2rem;
+                  font-size: 1rem;
                 }
                 @include small-tablet {
                   font-size: 1.4rem;

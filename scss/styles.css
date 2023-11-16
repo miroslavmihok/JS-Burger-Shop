@@ -652,7 +652,7 @@ main .container__page:nth-child(4) {
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(4) {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -708,6 +708,7 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
   position: relative;
   flex: 1;
   height: 100%;
+  min-height: 100px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -737,12 +738,12 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container:hover .banner {
-    transform: translateY(-67%);
+    transform: translateY(-72%);
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container:hover .banner {
-    transform: translateY(-69%);
+    transform: translateY(-74%);
   }
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner {
@@ -760,15 +761,18 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner {
-    bottom: -68%;
+    bottom: -110%;
+    height: auto;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner {
-    bottom: -70%;
+    bottom: -99%;
+    height: 130%;
   }
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_heading {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -777,11 +781,13 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
 @media (max-width: 767px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_heading {
     height: 30%;
+    padding: 0.5rem 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_heading {
     height: 30%;
+    padding: 0.5rem 0;
   }
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_heading h3 {
@@ -789,24 +795,30 @@ main .container__page:nth-child(4) .page4_container .news_container .news_item_c
   color: #f9f7dc;
 }
 main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_content {
+  width: 100%;
   height: 80%;
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   color: #f9f7dc;
   padding: 1rem;
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_content {
-    font-size: 0.8rem;
-    height: 70%;
+    font-size: 0.6rem;
+    height: auto;
+    min-height: 100%;
+    text-align: justify;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   main .container__page:nth-child(4) .page4_container .news_container .news_item_container .banner .banner_content {
-    font-size: 1rem;
-    height: 70%;
+    font-size: 0.9rem;
+    height: auto;
+    min-height: 110px;
+    padding: 2rem 1rem;
   }
 }
 main .container__page:nth-child(4) .page4_container .newsletter_container {
@@ -921,6 +933,11 @@ main .container__page:nth-child(5) .page5_container .about_container {
   padding: 2rem;
   box-shadow: 0 8px 8px 6px rgba(0, 0, 0, 0.6), 0 26px 20px 6px rgba(0, 0, 0, 0.29);
 }
+@media (max-width: 767px) {
+  main .container__page:nth-child(5) .page5_container .about_container {
+    height: 100%;
+  }
+}
 main .container__page:nth-child(5) .page5_container .about_container .about_content {
   height: 100%;
   display: flex;
@@ -958,7 +975,7 @@ main .container__page:nth-child(5) .page5_container .about_container .about_cont
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(5) .page5_container .about_container .about_content .about_content_text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 main .container__page:nth-child(5) .page5_container .about_container .about_content .about_content_text p {
@@ -967,7 +984,7 @@ main .container__page:nth-child(5) .page5_container .about_container .about_cont
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(5) .page5_container .about_container .about_content .about_content_text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 main .container__page:nth-child(6) {
@@ -1050,7 +1067,7 @@ main .container__page:nth-child(6) .page6_container .contact_address .address_ro
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(6) .page6_container .contact_address .address_row1 .address_column1 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1090,7 +1107,7 @@ main .container__page:nth-child(6) .page6_container .contact_address .address_ro
 }
 @media (max-width: 767px) {
   main .container__page:nth-child(6) .page6_container .contact_address .address_row1 .address_column2 td {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
