@@ -23,6 +23,15 @@ main {
     height: 100%;
     @include flex-align();
     padding: 10rem;
+    @include phone {
+      padding: 2rem;
+    }
+    @include small-tablet {
+      padding: 4rem;
+    }
+    @include tablet {
+      padding: 6rem;
+    }
     &:nth-child(1) {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
         url("../assets/bg4.webp") no-repeat top/cover;
@@ -33,13 +42,46 @@ main {
         .page1_button_menu {
           background: linear-gradient($--clr-springgreen, $--clr-shamrockgreen);
           @include button-homepage();
+          padding: 0.5rem 1rem;
+          font-size: 1.3rem;
+          @include phone {
+            padding: 0.5rem 0.5rem;
+            font-size: 0.9rem;
+          }
+          @include small-tablet {
+            padding: 0.5rem 0.75rem;
+            font-size: 1.1rem;
+          }
+          @include tablet {
+            padding: 0.75rem 0.75rem;
+            font-size: 1.2rem;
+          }
+          &:hover {
+            background: $--clr-shamrockgreen;
+          }
         }
 
         .page1_button_best {
-          background-color: $--clr-bistre;
+          background: linear-gradient($--clr-bistre, $--clr-bole);
           @include button-homepage();
           margin-left: 1rem;
-          border: 2px solid $--clr-beige;
+          padding: 0.5rem 1rem;
+          font-size: 1.3rem;
+          @include phone {
+            padding: 0.5rem 0.5rem;
+            font-size: 0.9rem;
+          }
+          @include small-tablet {
+            padding: 0.5rem 0.75rem;
+            font-size: 1.1rem;
+          }
+          @include tablet {
+            padding: 0.75rem 0.75rem;
+            font-size: 1.2rem;
+          }
+          &:hover {
+            background: $--clr-bole;
+          }
         }
 
         h1 {
@@ -47,10 +89,29 @@ main {
           color: $--clr-beige;
           letter-spacing: 0.2rem;
           font-weight: 900;
+          @include phone {
+            font-size: 3rem;
+          }
+          @include small-tablet {
+            font-size: 5rem;
+          }
+          @include tablet {
+            font-size: 6rem;
+          }
         }
 
         hr {
           width: 45%;
+
+          @include phone {
+            width: 35%;
+          }
+          @include small-tablet {
+            width: 55%;
+          }
+          @include tablet {
+            width: 45%;
+          }
         }
 
         h2 {
@@ -59,12 +120,30 @@ main {
           letter-spacing: 0.2rem;
           font-weight: 900;
           margin-top: 2rem;
+          @include phone {
+            font-size: 1.6rem;
+          }
+          @include small-tablet {
+            font-size: 2rem;
+          }
+          @include tablet {
+            font-size: 2.4rem;
+          }
         }
 
         p {
           font-size: 1.5rem;
           color: $--clr-beige;
           margin-top: 2rem;
+          @include phone {
+            font-size: 1rem;
+          }
+          @include small-tablet {
+            font-size: 1.2rem;
+          }
+          @include tablet {
+            font-size: 1.3rem;
+          }
         }
       }
     }
@@ -78,20 +157,48 @@ main {
         height: 100%;
         width: 100%;
         @include flex-row-center;
+        @include phone {
+          flex-direction: column;
+        }
 
-        img {
-          width: auto;
-          height: 30rem;
+        .page2_container_leftside {
+          width: 50%;
+          @include flex-align;
+          justify-content: center;
+          @include phone {
+            width: 100%;
+          }
+
+          img {
+            max-width: 75%;
+            aspect-ratio: 1/1;
+            @include phone {
+              max-width: 50%;
+            }
+          }
         }
 
         .page2_container_rightside {
           width: 50%;
           color: $--clr-beige;
           margin-left: 2rem;
+          @include phone {
+            width: 100%;
+            margin-left: 0;
+          }
 
           h3 {
             font-size: 5rem;
             margin-bottom: 1rem;
+            @include phone {
+              font-size: 2rem;
+            }
+            @include small-tablet {
+              font-size: 3rem;
+            }
+            @include tablet {
+              font-size: 4rem;
+            }
           }
 
           hr {
@@ -100,22 +207,53 @@ main {
 
           ul {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             font-size: 1.3rem;
             gap: 1rem;
             margin-top: 1rem;
+            @include phone {
+              font-size: 0.8rem;
+            }
+            @include small-tablet {
+              font-size: 1rem;
+            }
+            @include tablet {
+              font-size: 1.1rem;
+            }
           }
 
           p {
             font-size: 1.2rem;
             line-height: 2rem;
             margin-top: 2rem;
+            @include phone {
+              font-size: 0.8rem;
+            }
+            @include small-tablet {
+              font-size: 1rem;
+            }
+            @include tablet {
+              font-size: 1.1rem;
+            }
           }
 
           .button_addToCart {
             @include button-add;
             background-color: $--clr-poppy;
+            @include phone {
+              padding: 0.5rem 0.5rem;
+              font-size: 0.9rem;
+            }
+            @include small-tablet {
+              padding: 0.5rem 0.75rem;
+              font-size: 1.1rem;
+            }
+            @include tablet {
+              padding: 0.75rem 0.75rem;
+              font-size: 1.2rem;
+            }
           }
         }
       }
@@ -123,6 +261,9 @@ main {
       .pepper_img {
         position: absolute;
         height: auto;
+        @include not-desktop {
+          display: none;
+        }
         &:nth-child(2) {
           // border: 2px solid green;
           width: 6rem;
@@ -170,6 +311,17 @@ main {
       display: flex;
       justify-content: flex-start;
       gap: 1rem;
+      @include phone {
+        padding: 2rem;
+        min-height: auto;
+        height: fit-content;
+      }
+      @include small-tablet {
+        padding: 4rem;
+      }
+      @include tablet {
+        padding: 6rem;
+      }
 
       .page3_menu_container {
         width: 65%;
@@ -181,6 +333,14 @@ main {
         padding: 2rem;
         border: none;
         border-radius: 3rem;
+        @include phone {
+          width: 100%;
+          padding: 1rem 1rem 2rem 1rem;
+          height: fit-content;
+        }
+        @include small-tablet {
+          width: 100%;
+        }
 
         h2 {
           margin: 0;
@@ -188,6 +348,15 @@ main {
           color: $--clr-beige;
           letter-spacing: 0.2rem;
           font-weight: 900;
+          @include phone {
+            font-size: 1.6rem;
+          }
+          @include small-tablet {
+            font-size: 2rem;
+          }
+          @include tablet {
+            font-size: 2.4rem;
+          }
         }
 
         hr {
@@ -228,17 +397,33 @@ main {
               display: flex;
               flex-flow: column;
               justify-content: center;
+              @include phone {
+                width: 50%;
+              }
 
               h3 {
                 font-size: 1.4rem;
                 color: $--clr-beige;
                 margin-bottom: 0.5rem;
+                @include phone {
+                  font-size: 1.1rem;
+                  margin-bottom: 0rem;
+                }
               }
 
               p {
                 font-size: 0.9rem;
                 margin: 0.5rem 0 0 0;
                 color: $--clr-beige;
+                @include phone {
+                  font-size: 0.75rem;
+                }
+                @include small-tablet {
+                  font-size: 0.9rem;
+                }
+                @include tablet {
+                  font-size: 0.9rem;
+                }
               }
             }
 
@@ -247,6 +432,11 @@ main {
               display: flex;
               align-items: center;
               justify-content: flex-end;
+              @include phone {
+                width: 50%;
+                flex-direction: column;
+                justify-content: space-around;
+              }
 
               .item_price {
                 color: $--clr-beige;
@@ -274,6 +464,9 @@ main {
                 &:hover {
                   background-color: $--clr-indian;
                 }
+                @include phone {
+                  margin-left: 0;
+                }
               }
             }
           }
@@ -285,6 +478,12 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include phone {
+          display: none;
+        }
+        @include small-tablet {
+          display: none;
+        }
 
         img {
           max-width: 100%;
@@ -296,6 +495,15 @@ main {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
         url("../assets/bg7.webp") no-repeat center/cover;
       padding: 6rem 15rem;
+      @include phone {
+        padding: 4rem 2rem;
+      }
+      @include small-tablet {
+        padding: 2rem;
+      }
+      @include tablet {
+        padding: 2rem;
+      }
 
       .page4_container {
         width: 70%;
@@ -305,6 +513,9 @@ main {
         flex-flow: column;
         justify-content: flex-end;
         align-items: center;
+        @include phone {
+          width: 100%;
+        }
 
         .news_container {
           width: 100%;
@@ -312,6 +523,18 @@ main {
           display: flex;
           justify-content: center;
           gap: 4rem;
+          @include phone {
+            gap: 2rem;
+            flex-direction: column;
+            flex: 1;
+          }
+          @include small-tablet {
+            gap: 2rem;
+            flex-direction: column;
+          }
+          @include tablet {
+            gap: 3rem;
+          }
 
           .news_item_container {
             position: relative;
@@ -326,6 +549,9 @@ main {
             box-shadow: $--shadow-card;
             padding: 1rem;
             overflow: hidden;
+            @include phone {
+              width: 100%;
+            }
             &:nth-child(1) {
               background: linear-gradient(
                   rgba(0, 0, 0, 0.1),
@@ -349,6 +575,12 @@ main {
             }
             &:hover .banner {
               transform: translateY(-79%);
+              @include phone {
+                transform: translateY(-67%);
+              }
+              @include small-tablet {
+                transform: translateY(-69%);
+              }
             }
 
             .banner {
@@ -363,15 +595,27 @@ main {
               background-color: rgba(0, 0, 0, 0.7);
               transition: transform 0.3s ease;
               z-index: 1;
+              @include phone {
+                bottom: -68%;
+              }
+              @include small-tablet {
+                bottom: -70%;
+              }
 
               .banner_heading {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 20%;
+                @include phone {
+                  height: 30%;
+                }
+                @include small-tablet {
+                  height: 30%;
+                }
 
                 h3 {
-                  font-size: 1.8rem;
+                  font-size: 1.3rem;
                   color: $--clr-beige;
                 }
               }
@@ -384,6 +628,14 @@ main {
                 font-size: 1.2rem;
                 color: $--clr-beige;
                 padding: 1rem;
+                @include phone {
+                  font-size: 0.8rem;
+                  height: 70%;
+                }
+                @include small-tablet {
+                  font-size: 1rem;
+                  height: 70%;
+                }
               }
             }
           }
@@ -398,11 +650,24 @@ main {
           justify-content: space-evenly;
           text-align: center;
           margin-top: 4rem;
+          @include phone {
+            margin-top: 3rem;
+            flex: 0;
+            gap: 1rem;
+          }
 
           .newsletter_email_label {
             color: $--clr-beige;
-            font-size: 1.8rem;
-            font-weight: 500;
+            font-size: 1.6rem;
+            @include phone {
+              font-size: 1rem;
+            }
+            @include small-tablet {
+              font-size: 1.2rem;
+            }
+            @include tablet {
+              font-size: 1.4rem;
+            }
           }
           input {
             width: 40%;
@@ -410,6 +675,9 @@ main {
             border: none;
             border-radius: 0.5rem;
             padding: 0 0.5rem;
+            @include phone {
+              width: 60%;
+            }
           }
 
           .subscribe_button {
@@ -433,6 +701,15 @@ main {
       background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
         url("../assets/bg8.webp") no-repeat center/cover;
       padding: 6rem 15rem;
+      @include phone {
+        padding: 4rem 2rem;
+      }
+      @include small-tablet {
+        padding: 3rem;
+      }
+      @include tablet {
+        padding: 5rem;
+      }
 
       .page5_container {
         width: 70%;
@@ -442,6 +719,12 @@ main {
         flex-flow: column;
         justify-content: center;
         align-items: center;
+        @include phone {
+          width: 100%;
+        }
+        @include small-tablet {
+          width: 85%;
+        }
 
         .about_container {
           width: 100%;
@@ -459,6 +742,9 @@ main {
             height: 100%;
             display: flex;
             gap: 2rem;
+            @include phone {
+              flex-flow: column;
+            }
 
             .about_content_image {
               width: 50%;
@@ -466,20 +752,32 @@ main {
               background: url("../assets/about/about4.webp") no-repeat
                 center/cover;
               border: 0.5rem solid $--clr-lemon;
+              @include phone {
+                width: 100%;
+              }
             }
             .about_content_text {
               flex: 1;
               width: 50%;
               height: 100%;
+              @include phone {
+                width: 100%;
+              }
 
               h1 {
                 font-size: 2.5rem;
                 color: $--clr-beige;
+                @include phone {
+                  font-size: 2rem;
+                }
               }
 
               p {
                 font-size: 1.2rem;
                 color: $--clr-beige;
+                @include phone {
+                  font-size: 1rem;
+                }
               }
             }
           }
@@ -490,6 +788,15 @@ main {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
         url("../assets/bg9.webp") no-repeat center/cover;
       padding: 6rem 15rem;
+      @include phone {
+        padding: 4rem 2rem;
+      }
+      @include small-tablet {
+        padding: 3rem;
+      }
+      @include tablet {
+        padding: 5rem;
+      }
 
       .page6_container {
         width: 100%;
@@ -499,28 +806,56 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        @include phone {
+          height: 100%;
+        }
 
         .contact_address {
           width: 70%;
           display: flex;
           flex-flow: column;
+          @include phone {
+            width: 100%;
+          }
 
           .address_row1 {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            @include phone {
+              flex-direction: column;
+              justify-content: center;
+            }
 
             .address_column1 {
               h4 {
                 font-size: 2.6rem;
                 color: $--clr-lemon;
                 margin-top: 1rem;
+                @include phone {
+                  font-size: 1.6rem;
+                }
+                @include small-tablet {
+                  font-size: 1.8rem;
+                }
+                @include tablet {
+                  font-size: 2.2rem;
+                }
               }
 
               p {
                 font-size: 2rem;
                 color: $--clr-lemon;
                 margin-top: 1rem;
+                @include phone {
+                  font-size: 1.2rem;
+                }
+                @include small-tablet {
+                  font-size: 1.4rem;
+                }
+                @include tablet {
+                  font-size: 1.6rem;
+                }
               }
             }
 
@@ -529,12 +864,30 @@ main {
                 font-size: 2.6rem;
                 color: $--clr-lemon;
                 margin-top: 1rem;
+                @include phone {
+                  font-size: 1.6rem;
+                }
+                @include small-tablet {
+                  font-size: 1.8rem;
+                }
+                @include tablet {
+                  font-size: 2.2rem;
+                }
               }
 
               td {
                 font-size: 2rem;
                 color: $--clr-lemon;
                 margin-top: 1rem;
+                @include phone {
+                  font-size: 1.2rem;
+                }
+                @include small-tablet {
+                  font-size: 1.4rem;
+                }
+                @include tablet {
+                  font-size: 1.6rem;
+                }
               }
             }
           }
@@ -559,6 +912,9 @@ main {
       position: absolute;
       right: 0;
       bottom: 50%;
+      @include not-desktop {
+        display: none;
+      }
 
       a {
         @include flex-row-center();

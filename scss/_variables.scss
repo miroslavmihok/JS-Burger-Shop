@@ -48,9 +48,6 @@ $--shadow-card: 0 8px 8px 6px rgba(0, 0, 0, 0.6),
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  &:hover {
-    background-color: $--clr-shamrockgreen;
-  }
 }
 
 @mixin button-add() {

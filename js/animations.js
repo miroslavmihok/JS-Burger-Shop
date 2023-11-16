@@ -11,26 +11,29 @@ window.addEventListener("resize", calcWindowWidth);
 function calcWindowWidth() {
   if (window.matchMedia("(max-width: 1535px)").matches) {
     orientation = "vertical";
+    createSmoothScrolling(orientation);
   } else {
     orientation = "horizontal";
+    createSmoothScrolling(orientation);
   }
-  requestAnimationFrame(raf);
 }
 
-const lenis = new Lenis({
-  orientation: orientation,
-  duration: 2,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-});
+function createSmoothScrolling(orientationPar) {
+  const lenis = new Lenis({
+    orientation: orientationPar,
+    duration: 2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
 
-lenis.on("scroll", (e) => {});
-function raf(time) {
-  lenis.raf(time);
-  ScrollTrigger.update();
+  lenis.on("scroll", (e) => {});
+  function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
 }
-
-requestAnimationFrame(raf);
 
 // ScrollTo - menu items
 
@@ -61,6 +64,19 @@ page1BestBtn.addEventListener("click", (e) => {
   gsap.to(window, { duration: 1, scrollTo: { x: "#page2" } });
 });
 
+// phone menu
+
+const phoneMenuOpenBtn = document.querySelector(".phone_menu-button");
+const phoneMenuCloseBtn = document.querySelector(".phone_menu-button-close");
+const phoneMenu = document.querySelector(".phone_menu");
+
+phoneMenuOpenBtn.addEventListener("click", () => {
+  phoneMenu.classList.add("show-navbar");
+});
+phoneMenuCloseBtn.addEventListener("click", () => {
+  phoneMenu.classList.remove("show-navbar");
+});
+
 // --------------
 // ANIMATIONS
 // --------------
@@ -77,7 +93,7 @@ const page1HeroHeadingParagraph = gsap.utils.toArray([
   ".page1_container > p",
 ]);
 const page1Buttons = gsap.utils.toArray(".page1_container button");
-const page1Footer = document.querySelector("footer");
+const page1Footer = document.querySelector(".main-footer");
 
 const page1Timeline = gsap.timeline({
   defaults: {
